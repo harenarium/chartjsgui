@@ -20,7 +20,7 @@ class App extends Component {
         backgroundColor: "rgba(0, 0, 0, 0)",
         borderColor: "rgba(0, 0, 0, 1)",
         borderWidth: 1,
-        borderDash: [],
+        borderDash: [0,0],
         lineTension: 0.5,
         radius: 0,
         label: "",
