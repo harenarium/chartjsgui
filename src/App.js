@@ -27,6 +27,12 @@ class App extends Component {
     }
   }
 
+  setData = (file) => {
+    this.setState({
+      ///<<==
+    })
+  }
+
   setLineColor = (red, green, blue, alpha) => {
     this.setState({
       chartData:{

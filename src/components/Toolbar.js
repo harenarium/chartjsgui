@@ -4,6 +4,7 @@ import LineColorComponent from './LineColorComponent.js'
 import FillColorComponent from './FillColorComponent.js'
 import BackgroundColorComponent from './BackgroundColorComponent.js'
 import LineThickness from './LineThickness.js'
+import UploadComponent from './UploadComponent.js'
 
 
 
@@ -44,6 +45,7 @@ class Toolbar extends Component {
 
   render() {
     let components= {
+      "Upload JSON": <UploadComponent setData={this.props.setData}/>,
       "Line Color": <LineColorComponent chartData={this.props.chartData} setLineColor={this.props.setLineColor}/>,
       "Fill Color": <FillColorComponent chartData={this.props.chartData} setFillColor={this.props.setFillColor}/>,
       "Background Color": <BackgroundColorComponent backgroundColor={this.props.backgroundColor} setBackgroundColor={this.props.setBackgroundColor}/>,
@@ -54,6 +56,7 @@ class Toolbar extends Component {
 
     return (
       <div className="Toolbar" style={{ ...style}}>
+        <Button name="Upload JSON" clickHandler={this.clickHandler}/>
         <Button name="Background Color" clickHandler={this.clickHandler}/>
         <Button name="Line Color" clickHandler={this.clickHandler}/>
         <Button name="Fill Color" clickHandler={this.clickHandler}/>
