@@ -27,12 +27,6 @@ class App extends Component {
     }
   }
 
-  setData = (file) => {
-    this.setState({
-      ///<<==
-    })
-  }
-
   setLineColor = (red, green, blue, alpha) => {
     this.setState({
       chartData:{
@@ -71,12 +65,23 @@ class App extends Component {
     })
   }
 
+  setData = (data) => {
+    let json = JSON.parse(data)
+    this.setState({
+        chartData:{
+        ...this.state.chartData,
+        data: json.data,
+        labels: json.labels,
+        label: json.name
+      }
+    }, () => {console.log(this.state.chartData)})
+  }
+
   render() {
-    console.log(Data.data)
     return (
       <div className="App">
         <Navbar />
-        <Toolbar chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} setLineColor={this.setLineColor} setFillColor={this.setFillColor} setBackgroundColor={this.setBackgroundColor} setLineThickness={this.setLineThickness}/>
+        <Toolbar setData={this.setData} chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} setLineColor={this.setLineColor} setFillColor={this.setFillColor} setBackgroundColor={this.setBackgroundColor} setLineThickness={this.setLineThickness}/>
         <Container chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} />
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Upload from 'rc-upload'
 
 const style = {
 	// border: '1px dashed gray',
@@ -19,31 +18,20 @@ const style = {
 
 class UploadComponent extends Component{
 
-  constructor(props){
-    super(props)
-
-    this.state={
-
-    }
-  }
-
-  setColor = (event) => {
-    let name = event.target.name
-    let value = parseInt(event.target.value)
-    if(name === 'alpha' && value > 100){
-      value = 100
-    }
-    if(value > 255){
-      value = 255
-    } else if (value < 0){
-      value = 0
-    }
-    if (typeof value === "number"){
-      this.setState({[name]: value}, () => { this.props.setFillColor(this.state.red, this.state.green, this.state.blue, this.state.alpha/100) })
-    }
-  }
-
   changeHandler = (event) => {
+    let file = event.target.files[0];
+    let fr = new FileReader();
+    fr.readAsText(file)
+    fr.onload = () => {
+      this.props.setData(fr.result)
+    };
+
+    // console.log(event.target.files[0])
+    //  var reader = new FileReader()
+    //  reader.readAsText = function(theFile) {
+    //    console.log(theFile)
+    //  }
+    //  reader.readAsText(event.target.files[0])
     // console.log(event.target.value);
     // console.log(json)
     // import Data from `${event.target.value}`
@@ -57,10 +45,8 @@ class UploadComponent extends Component{
             Fill Color
           </div>
           <div>
-            <Upload />
+            <input type="file" id="file" onChange={this.changeHandler} />
           </div><br></br>
-          <div style={{backgroundColor: `rgba(${this.state.red}, ${this.state.green}, ${this.state.blue}, ${this.state.alpha/100})`, height: '100px', width: '100px', margin: 'auto'}}>
-          </div>
         </div>
     )
   }
