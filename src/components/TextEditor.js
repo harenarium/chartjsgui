@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import CodeMirror from 'react-codemirror';
+// import {UnControlled as CodeMirror} from 'react-codemirror2'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/tomorrow-night-bright.css'
 import 'codemirror/mode/javascript/javascript.js'
+
 
 const style = {
   border: '1px solid gray',
@@ -16,6 +18,8 @@ const style = {
   textAlign: 'left'
 }
 
+let key = 0
+
 class TextEditor extends Component {
   constructor(){
     super()
@@ -28,22 +32,20 @@ class TextEditor extends Component {
     let newCode = this.setCode(nextProps)
 
     this.setState({
-      code: newCode,
-    });
-
+      code: newCode
+    }, () => {console.log(this.state.code)})
   }
 
   componentDidMount(){
     let newCode = this.setCode(this.props)
 
     this.setState({
-      code: newCode,
-    });
+      code: newCode
+    })
 
   }
 
   setCode = (props) => {
-    console.log("pros\ps", props);
     return (`//copy into body of html file
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <canvas id="myChart" width="400" height="400"></canvas>
@@ -79,10 +81,10 @@ class TextEditor extends Component {
       theme: "tomorrow-night-bright",
       mode: "javascript"
     }
+    key += 1
     return (
       <div className="TextEditor" style={{ ...style}}>
-        <CodeMirror value={this.setCode(this.props)} options={options} />
-
+        <CodeMirror key={key} value={this.state.code} options={options} />
       </div>
     );
   }
