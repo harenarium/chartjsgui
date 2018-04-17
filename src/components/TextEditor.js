@@ -34,7 +34,7 @@ class TextEditor extends Component {
 
     this.setState({
       code: newCode
-    }, () => {console.log(this.state.code)})
+    })
   }
 
   componentDidMount(){
@@ -77,7 +77,6 @@ class TextEditor extends Component {
 
 
   render() {
-    // console.log(this.state.code);
     let options = {
       lineNumbers: true,
       theme: "tomorrow-night-bright",

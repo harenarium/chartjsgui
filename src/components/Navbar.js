@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Route, Switch, Link } from 'react-router-dom'
+import Logout from './Logout'
+
 
 const style = {
   position: 'fixed',
@@ -16,7 +19,17 @@ class Navbar extends Component {
   render() {
     return (
       <div className="Navbar" style={{...style}}>
-        <img src={require('../chart-logo-01.png')} style={{height: '100%', position: 'absolute', left: '0%'}}/>
+
+        <div style={{position: "absolute", right: "2%", top: "27%"}}>
+            <Link style={{textDecorationLine: "none"}} to="/logout">Logout</Link>
+       </div>
+     <Switch>
+       <Route path="/logout" render={ (renderProps) => {
+         return <Logout logout={ this.props.logout } history={ renderProps.history } />;
+       } } />
+     </Switch>
+
+        <img src={require('../chart-logo-01.png')} style={{height: '80%', position: 'absolute', top: '13%', left: '2%'}}/>
       </div>
     );
   }

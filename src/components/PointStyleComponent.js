@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 
 const style = {
-	// border: '1px dashed gray',
   height: '200px',
   width: '200px',
-	backgroundColor: 'silver',
-	padding: '0.5rem 1rem',
-	marginRight: '1.5rem',
-	marginBottom: '1.5rem',
-	cursor: 'move',
+	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',
-	top: '50%',
-	left: ''
+	top: '65%',
+	left: '10%',
+  height: '30%',
+  width: '80%'
 }
+
 
 
 class PointStyleComponent extends Component{
