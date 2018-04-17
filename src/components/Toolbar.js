@@ -5,6 +5,8 @@ import FillColorComponent from './FillColorComponent.js'
 import BackgroundColorComponent from './BackgroundColorComponent.js'
 import LineThickness from './LineThickness.js'
 import UploadComponent from './UploadComponent.js'
+import PointStyleComponent from './PointStyleComponent.js'
+import GraphTypeComponent from './GraphTypeComponent.js'
 
 
 
@@ -50,6 +52,8 @@ class Toolbar extends Component {
       "Fill Color": <FillColorComponent chartData={this.props.chartData} setFillColor={this.props.setFillColor}/>,
       "Background Color": <BackgroundColorComponent backgroundColor={this.props.backgroundColor} setBackgroundColor={this.props.setBackgroundColor}/>,
       "Line Thickness": <LineThickness chartData={this.props.chartData} setLineThickness={this.props.setLineThickness}/>,
+      "Point Style": <PointStyleComponent chartData={this.props.chartData} setPointStyle={this.props.setPointStyle}/>,
+      "Graph Type": <GraphTypeComponent chartData={this.props.chartData} setType={this.props.setType}/>,
     }
 
     let currentComponent = components[this.state.currentComponent]
@@ -61,8 +65,8 @@ class Toolbar extends Component {
         <Button name="Line Color" clickHandler={this.clickHandler}/>
         <Button name="Fill Color" clickHandler={this.clickHandler}/>
         <Button name="Line Thickness" clickHandler={this.clickHandler}/>
+        <Button name="Point Style" clickHandler={this.clickHandler}/>
         <Button name="Graph Type" clickHandler={this.clickHandler}/>
-        <Button name="Point Size" clickHandler={this.clickHandler}/>
         <Button name="Another one" clickHandler={this.clickHandler}/>
         {this.state.currentComponent === "" ? null : (
           <div>

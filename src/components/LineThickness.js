@@ -30,7 +30,6 @@ class LineThickness extends Component{
   }
 
   setLine = (event) => {
-    let thickness, dashSolid, dashSpace, tension
     let name = event.target.name
     let value = parseInt(event.target.value)
     if(name === 'tension' && value > 100){
