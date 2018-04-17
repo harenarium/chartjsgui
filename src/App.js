@@ -18,6 +18,7 @@ class App extends Component {
         borderDash: [0,0],
         lineTension: 0.5,
         radius: 0,
+        pointStyle: "circle",
         label: "",
         labels: Data.labels,
         data: Data.data,
@@ -27,14 +28,31 @@ class App extends Component {
     }
   }
 
+  setType = (type) => {
+    this.setState({
+      chartData:{
+        ...this.state.chartData,
+        type: type
+      }
+    })
+  }
+
+  setPointStyle = (radius, style) => {
+    this.setState({
+      chartData:{
+        ...this.state.chartData,
+        radius: radius,
+        pointStyle: style
+      }
+    })
+  }
+
   setLineColor = (red, green, blue, alpha) => {
     this.setState({
       chartData:{
         ...this.state.chartData,
         borderColor: `rgba(${red}, ${green}, ${blue}, ${alpha})`
       }
-    },()=>{
-      console.log("state in setLineColor",this.state);
     })
   }
 
@@ -81,7 +99,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Toolbar setData={this.setData} chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} setLineColor={this.setLineColor} setFillColor={this.setFillColor} setBackgroundColor={this.setBackgroundColor} setLineThickness={this.setLineThickness}/>
+        <Toolbar setType={this.setType} setPointStyle={this.setPointStyle} setData={this.setData} chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} setLineColor={this.setLineColor} setFillColor={this.setFillColor} setBackgroundColor={this.setBackgroundColor} setLineThickness={this.setLineThickness}/>
         <Container chartData={this.state.chartData} backgroundColor={this.state.backgroundColor} />
       </div>
     );

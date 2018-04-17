@@ -64,7 +64,8 @@ class TextEditor extends Component {
         borderWidth: ${props.chartData.borderWidth},
         borderDash: [${props.chartData.borderDash}],
         lineTension: ${props.chartData.lineTension},
-        radius: ${props.chartData.radius}
+        radius: ${props.chartData.radius},
+        pointStyle: "${props.chartData.pointStyle}",
       }]
     },
     options: ${JSON.stringify(props.chartData.options)}
