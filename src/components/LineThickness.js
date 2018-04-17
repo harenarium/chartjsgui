@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 const style = {
-  height: '200px',
-  width: '200px',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',
@@ -28,7 +26,7 @@ class LineThickness extends Component{
 
   setLine = (event) => {
     let name = event.target.name
-    let value = parseInt(event.target.value)
+    let value = parseInt(event.target.value, 10)
     if(name === 'tension' && value > 100){
       value = 100
     }

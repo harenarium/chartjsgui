@@ -4,10 +4,10 @@ import Navbar from './components/Navbar.js'
 import Toolbar from './components/Toolbar.js'
 import Container from './components/Container.js'
 import Data from './data.json'
-import Register from './components/Register';
+// import Register from './components/Register';
 import Login from './components/Login';
-import Logout from './components/Logout';
-import { Route, Switch, Link } from 'react-router-dom';
+// import Logout from './components/Logout';
+import { Route/*, Switch, Link*/ } from 'react-router-dom';
 import Background from './background-01.png'
 
 class App extends Component {

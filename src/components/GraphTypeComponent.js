@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 const style = {
-  height: '200px',
-  width: '200px',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',

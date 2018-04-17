@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 const style = {
-  height: '200px',
-  width: '200px',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',
@@ -31,7 +29,7 @@ class PointStyleComponent extends Component{
     if(name === 'pointStyle'){
       value = event.target.value
     } else {
-      value = parseInt(event.target.value)
+      value = parseInt(event.target.value, 10)
       if(value > 255){
         value = 255
       } else if (value < 0){

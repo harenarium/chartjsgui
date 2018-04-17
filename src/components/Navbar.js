@@ -29,7 +29,7 @@ class Navbar extends Component {
        } } />
      </Switch>
 
-        <img src={require('../chart-logo-01.png')} style={{height: '80%', position: 'absolute', top: '13%', left: '2%'}}/>
+        <img src={require('../chart-logo-01.png')} alt="Gooey Charts Logo" style={{height: '80%', position: 'absolute', top: '13%', left: '2%'}}/>
       </div>
     );
   }

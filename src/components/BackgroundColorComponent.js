@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 const style = {
-  height: '200px',
-  width: '200px',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',
@@ -19,16 +17,16 @@ class BackgroundColorComponent extends Component{
     super(props)
 
     this.state={
-      red: parseInt(props.backgroundColor.split(/[(),]+/)[1]),
-      green: parseInt(props.backgroundColor.split(/[(),]+/)[2]),
-      blue: parseInt(props.backgroundColor.split(/[(),]+/)[3]),
-      alpha: parseInt(props.backgroundColor.split(/[(),]+/)[4]) * 100
+      red: parseInt(props.backgroundColor.split(/[(),]+/)[1], 10),
+      green: parseInt(props.backgroundColor.split(/[(),]+/)[2], 10),
+      blue: parseInt(props.backgroundColor.split(/[(),]+/)[3], 10),
+      alpha: parseInt(props.backgroundColor.split(/[(),]+/)[4], 10) * 100
     }
   }
 
   setColor = (event) => {
     let name = event.target.name
-    let value = parseInt(event.target.value)
+    let value = parseInt(event.target.value, 10)
     if(name === 'alpha' && value > 100){
       value = 100
     }

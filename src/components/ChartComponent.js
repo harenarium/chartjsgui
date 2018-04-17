@@ -16,9 +16,6 @@ const style = {
 }
 
 class ChartComponent extends Component {
-  constructor(props){
-    super(props)
-  }
 
   setChartParams = (props) => {
     const config = {
@@ -45,7 +42,7 @@ class ChartComponent extends Component {
   initializeChart(options) {
     let el = ReactDOM.findDOMNode(this.refs.chart);
     let ctx = el.getContext("2d");
-    let chart = new Chart(ctx, options);
+    new Chart(ctx, options);
   }
 
   componentWillReceiveProps(nextProps){
