@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 
 const style = {
 	// border: '1px dashed gray',
-	backgroundColor: 'white',
-	padding: '2%',
-	marginRight: '1.5rem',
-	marginBottom: '1.5rem',
-  width: '90%',
-	cursor: 'move',
-	float: 'left',
+	backgroundColor: 'WhiteSmoke',
+	padding: '2% 0% 2% 0%',
+	marginRight: '10%',
+	marginBottom: '5%',
+	marginLeft: '10%',
+	marginTop: '5%',
+  width: '80%',
+	// borderLeftStyle: 'solid',
+	// borderColor: 'white'
+	// float: 'left',
 }
 
 class Button extends Component {

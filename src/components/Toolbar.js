@@ -12,23 +12,22 @@ const style = {
   position: 'fixed',
   height:'100%',
   width: '20%',
-	backgroundColor: 'black',
-	padding: '0.5rem 1rem',
-	marginRight: '1.5rem',
-	marginBottom: '1.5rem',
-	cursor: 'move',
+	backgroundColor: 'silver',
+	// padding: '0.5rem 1rem',
+	// marginRight: '1.5rem',
+	// marginBottom: '1.5rem',
 	float: 'left',
 }
 
-const compStyle = {
-	// border: '1px dashed gray',
-	backgroundColor: 'white',
-	padding: '0.5rem 1rem',
-	marginRight: '1.5rem',
-	marginBottom: '1.5rem',
-	cursor: 'move',
-	float: 'left',
-}
+// const compStyle = {
+// 	// border: '1px dashed gray',
+// 	backgroundColor: 'white',
+// 	padding: '0.5rem 1rem',
+// 	marginRight: '1.5rem',
+// 	marginBottom: '1.5rem',
+// 	cursor: 'move',
+// 	float: 'left',
+// }
 
 class Toolbar extends Component {
 
@@ -56,6 +55,7 @@ class Toolbar extends Component {
 
     return (
       <div className="Toolbar" style={{ ...style}}>
+        <div style={{height: '7.5%'}}></div>
         <Button name="Upload JSON" clickHandler={this.clickHandler}/>
         <Button name="Background Color" clickHandler={this.clickHandler}/>
         <Button name="Line Color" clickHandler={this.clickHandler}/>

@@ -4,14 +4,15 @@ import Chart from 'chart.js';
 
 const style = {
   // border: '1px dashed gray',
-  padding: '0.5rem 1rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
+  // padding: '0.5rem 1rem',
+  // marginRight: '1.5rem',
+  // marginBottom: '1.5rem',
   float: 'right',
   position: 'absolute',
-  // top: '10%',
+  top: '15%',
   left: '25%',
-  width: '70%'
+  width: '50%',
+  height: '40%'
 }
 
 class ChartComponent extends Component {
@@ -35,7 +36,7 @@ class ChartComponent extends Component {
           radius: props.chartData.radius
         }]
       },
-      options: {}
+      options: {maintainAspectRatio: false}
     }
     return config
   }

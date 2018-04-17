@@ -7,14 +7,15 @@ import 'codemirror/mode/javascript/javascript.js'
 
 
 const style = {
-  border: '1px solid gray',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
+  // border: '1px solid gray',
+  // marginRight: '1%',
+  // marginBottom: '1%',
   float: 'right',
   position: 'absolute',
   top: '60%',
   left: '25%',
-  width: '70%',
+  width: '50%',
+  height: '40%',
   textAlign: 'left'
 }
 
@@ -79,7 +80,8 @@ class TextEditor extends Component {
     let options = {
       lineNumbers: true,
       theme: "tomorrow-night-bright",
-      mode: "javascript"
+      mode: "javascript",
+      lineWrapping: false
     }
     key += 1
     return (
