@@ -36,7 +36,7 @@ class GraphTypeComponent extends Component{
     return (
         <div style={{ ...style}} >
           <div style={{padding: '10px'}}>
-            Point Style
+            Graph Type
           </div>
           <div>
             Style: <select onChange={this.setGraphType} name="type">

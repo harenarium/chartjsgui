@@ -21,7 +21,7 @@ class App extends Component {
         borderColor: "rgba(0, 0, 0, 1)",
         borderWidth: 1,
         borderDash: [0,0],
-        lineTension: 0.5,
+        lineTension: 0.4,
         radius: 0,
         pointStyle: "circle",
         label: "",

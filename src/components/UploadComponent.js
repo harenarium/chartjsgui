@@ -37,7 +37,7 @@ class UploadComponent extends Component{
     return (
         <div style={{ ...style}} >
           <div style={{padding: '10px'}}>
-            Fill Color
+            Upload JSON File
           </div>
           <div>
             <input type="file" id="file" onChange={this.changeHandler} />
