@@ -146,7 +146,7 @@ componentDidMount(){
     console.log(source)
     this.state.auth ? document.body.style.backgroundImage = null : document.body.style.backgroundImage = `${source}`
     return (
-      <div style={{position: 'fixed', top: '0', left: '0', width: '100%', height: '100%'}} className="App">
+      <div style={{position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: "rgba(0,0,0,0)"}} className="App">
         {this.state.auth ? <div>
           {/* <header className="App-header">
            <Link to="/logout">Logout</Link>
@@ -162,6 +162,7 @@ componentDidMount(){
         </div> :  <Route path="/" render={ (renderProps) => {
            return <Login registeredCallback={this.gotAuthToken} renderLogin={this.renderLogin} loggedInCallback={ this.gotAuthToken } history={ renderProps.history } />;
          } } />}
+        {this.state.auth ? null :<img style={{position: "fixed", top: '0', left: '0', zIndex: "-999", maxWidth: "100%"}} src={Background}/>}
       </div>
     );
   }

@@ -51,7 +51,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div >
+      <div style={{backgroundColor: "rgba(75,175,255,0.55)", padding: '3% 5% 5% 5%', width: "20%", position: "absolute", top: "28%", left:"36%"}}>
         {this.state.register ? <div>
           <header className="App-header">
             <Link onClick={this.setRegister} to="/">Login</Link>
