@@ -49,7 +49,8 @@ componentDidMount(){
      }, ()=> {
        console.log(this.state)
      })
-   }
+   } else{
+  }
  }
 
  gotAuthToken = (user) => {

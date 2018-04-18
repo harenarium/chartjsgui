@@ -19,7 +19,6 @@ export default class Login extends Component {
     // document.body.style.backgroundImage = null
   }
 
-
   handleSubmit = (e) => {
     e.preventDefault()
     gat.login(this.state.username, this.state.password)
