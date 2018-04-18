@@ -5,7 +5,7 @@ import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/tomorrow-night-bright.css'
 import 'codemirror/mode/javascript/javascript.js'
 import ReactDOM from 'react-dom'
-// import {CopyToClipboard} from 'react-copy-to-clipboard'
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 
 const style = {
@@ -28,7 +28,8 @@ class TextEditor extends Component {
     super()
     this.state={
       code: "// Code",
-      copied: false
+      copied: false,
+      value: ""
     }
   }
 
@@ -37,6 +38,7 @@ class TextEditor extends Component {
 
     this.setState({
       code: newCode,
+      value: newCode,
       copied: false
     })
   }
@@ -45,7 +47,8 @@ class TextEditor extends Component {
     let newCode = this.setCode(this.props)
 
     this.setState({
-      code: newCode
+      code: newCode,
+      value: newCode
     })
 
   }
@@ -108,9 +111,16 @@ class TextEditor extends Component {
     return (
 
         <div className="TextEditor" style={{ ...style}}>
-          <textarea onChange={() => {this.setState({copied: false})}} style={{display: 'none'}} id='input' value={this.state.code} />
-          <button style={{width: "15%"}} className="ui fluid medium white-smoke submit button" onClick={this.copyFunction}>Copy Code</button>
-          {this.state.copied ? ' Code Copied' : null}
+          <section className="section">
+          <CopyToClipboard
+          onCopy={this.onCopy}
+          options={{message: 'Whoa!'}}
+          text={this.state.value}>
+          <button style={{width: "25%"}} className="ui fluid medium white-smoke submit button" onClick={this.onClick}>Copy code</button>
+          </CopyToClipboard>
+          </section>
+          {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+
           <br /><br />
           <CodeMirror ref='code' key={key} value={this.state.code} options={options} />
         </div>
