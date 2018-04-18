@@ -9,6 +9,7 @@ const style = {
 	marginLeft: '10%',
 	marginTop: '5%',
   width: '80%',
+	borderRadius: "5px"
 	// borderLeftStyle: 'solid',
 	// borderColor: 'white'
 	// float: 'left',
