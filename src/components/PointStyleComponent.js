@@ -45,9 +45,9 @@ class PointStyleComponent extends Component{
 
     return (
         <div style={{ ...style}} >
-          <div style={{padding: '10px'}}>
+          <h3 style={{padding: '0%'}}>
             Point Style
-          </div>
+          </h3>
           <div>
             Point Size: <input onChange={this.setPoint} value={this.state.radius} name="radius" type="number" placeholder="" min={0} max={255}/> <br />
             Style: <select onChange={this.setPoint} name="pointStyle">

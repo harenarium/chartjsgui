@@ -34,16 +34,27 @@ class UploadComponent extends Component{
 
   render() {
 
-    return (
+		return (
         <div style={{ ...style}} >
-          <div style={{padding: '10px'}}>
+          <h3 style={{padding: '0%'}}>
             Upload JSON File
-          </div>
-          <div>
-            <input type="file" id="file" onChange={this.changeHandler} />
-          </div><br></br>
+          </h3>
+					<div style={{margin: 'auto'}}>
+						<input type="file" id="file" onChange={this.changeHandler} />
+					</div><br></br>
         </div>
     )
+
+    // return (
+    //     <div style={{ ...style}} >
+    //       <div style={{padding: '10px'}}>
+    //         Upload JSON File
+    //       </div>
+    //       <div>
+    //         <input type="file" id="file" onChange={this.changeHandler} />
+    //       </div><br></br>
+    //     </div>
+    // )
   }
 }
 

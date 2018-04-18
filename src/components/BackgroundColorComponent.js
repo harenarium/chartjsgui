@@ -44,16 +44,16 @@ class BackgroundColorComponent extends Component{
 
     return (
         <div style={{ ...style}} >
-          <div style={{padding: '10px'}}>
+          <h3 style={{padding: '0%'}}>
             Background Color
-          </div>
-          <div>
-            <input onChange={this.setColor} value={this.state.red} name="red" type="number" placeholder="Red Value" min={0} max={255}/>
-            <input onChange={this.setColor} value={this.state.green} name="green" type="number" placeholder="Green Value" min={0} max={255}/>
-            <input onChange={this.setColor} value={this.state.blue} name="blue" type="number" placeholder="Blue Value" min={0} max={255}/>
-            <input onChange={this.setColor} value={this.state.alpha} name="alpha" type="number" placeholder="Alpha" min={0} max={100}/>
+          </h3>
+          <div style={{textAlign: 'right', marginRight: '35%'}}>
+            Red: <input onChange={this.setColor} value={this.state.red} name="red" type="number" placeholder="Red Value" min={0} max={255}/><br></br>
+            Green: <input onChange={this.setColor} value={this.state.green} name="green" type="number" placeholder="Green Value" min={0} max={255}/><br></br>
+            Blue: <input onChange={this.setColor} value={this.state.blue} name="blue" type="number" placeholder="Blue Value" min={0} max={255}/><br></br>
+            Alpha: <input onChange={this.setColor} value={this.state.alpha} name="alpha" type="number" placeholder="Alpha" min={0} max={100}/><br></br>
           </div><br></br>
-          <div style={{backgroundColor: `rgba(${this.state.red}, ${this.state.green}, ${this.state.blue}, ${this.state.alpha/100})`, height: '100px', width: '100px', margin: 'auto'}}>
+          <div style={{border: '1px solid silver', backgroundColor: `rgba(${this.state.red}, ${this.state.green}, ${this.state.blue}, ${this.state.alpha/100})`, height: '100px', width: '100px', margin: 'auto'}}>
           </div>
         </div>
     )

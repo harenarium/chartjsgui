@@ -35,9 +35,9 @@ class GraphTypeComponent extends Component{
 
     return (
         <div style={{ ...style}} >
-          <div style={{padding: '10px'}}>
+          <h3 style={{padding: '0%'}}>
             Graph Type
-          </div>
+          </h3>
           <div>
             Style: <select onChange={this.setGraphType} name="type">
               <option value='line'>Line</option>

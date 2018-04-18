@@ -67,7 +67,7 @@ class Toolbar extends Component {
         <Button name="Line Thickness" clickHandler={this.clickHandler}/>
         <Button name="Point Style" clickHandler={this.clickHandler}/>
         <Button name="Graph Type" clickHandler={this.clickHandler}/>
-        <Button name="Another one" clickHandler={this.clickHandler}/>
+        {/* <Button name="Another one" clickHandler={this.clickHandler}/> */}
         {this.state.currentComponent === "" ? null : (
           <div>
             {currentComponent}

@@ -46,14 +46,13 @@ class LineThickness extends Component{
 
     return (
         <div style={{ ...style}} >
-          <div style={{padding: '10px'}}>
+          <h3 style={{padding: '0%'}}>
             Line Thickness
-          </div>
-          <div>
-            Thickness: <input onChange={this.setLine} value={this.state.thickness} name="thickness" type="number" placeholder="" min={0} max={255}/> <br />
-            Dash: <input onChange={this.setLine} value={this.state.dashSolid} name="dashSolid" type="number" placeholder="" min={0} max={255}/>
-            <input onChange={this.setLine} value={this.state.dashSpace} name="dashSpace" type="number" placeholder="" min={0} max={255}/> <br />
-
+          </h3>
+          <div style={{textAlign: 'right', marginRight: '25%'}}>
+            Thickness: <input onChange={this.setLine} value={this.state.thickness} name="thickness" type="number" placeholder="" min={0} max={255}/><br />
+            Dash Length: <input onChange={this.setLine} value={this.state.dashSolid} name="dashSolid" type="number" placeholder="" min={0} max={255}/><br />
+            Dash Spacing: <input onChange={this.setLine} value={this.state.dashSpace} name="dashSpace" type="number" placeholder="" min={0} max={255}/><br />
             Line Tension: <input onChange={this.setLine} value={this.state.tension} name="tension" type="number" placeholder="" min={0} max={100}/>
           </div><br></br>
         </div>

@@ -9,7 +9,7 @@ const style = {
   // marginBottom: '1.5rem',
   float: 'right',
   position: 'absolute',
-  top: '15%',
+  top: '10%',
   left: '25%',
   width: '50%',
   height: '40%'
@@ -34,7 +34,7 @@ class ChartComponent extends Component {
           pointStyle: props.chartData.pointStyle
         }]
       },
-      options: {maintainAspectRatio: false}
+      options: {maintainAspectRatio: false, events: []}
     }
     return config
   }

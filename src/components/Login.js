@@ -70,10 +70,10 @@ export default class Login extends Component {
             this.state.errors.map((error) => <li>{error}</li>)
           }</ul>
           <form onSubmit={ this.handleSubmit }>
-            <label htmlFor="username">Username</label>
-            <input onChange={ this.onChange } value={ this.state.username } type="text" name="username" id="username" />
-            <label htmlFor="password">Password</label>
-            <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" />
+            <label htmlFor="username">Username: </label>
+            <input onChange={ this.onChange } value={ this.state.username } type="text" name="username" id="username" /><br />
+            <label htmlFor="password">Password: </label>
+            <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" /><br />
             <input type="submit" />
           </form>
         </div>}
