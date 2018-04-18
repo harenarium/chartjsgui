@@ -45,25 +45,67 @@ export default class Login extends Component {
   }
 
   setRegister = () => {
+    console.log('helalkjfeljke')
     this.setState({register: !this.state.register})
   }
 
   render() {
     return (
-      <div style={{backgroundColor: "rgba(75,175,255,0.55)", padding: '3% 5% 5% 5%', width: "20%", position: "absolute", top: "28%", left:"36%"}}>
+      <div style={{width: '25%', position: "absolute", top: "28%", left:"36%"}}>
+        <div>
+          <img className='column' src={require('../chart-logo-01.png')} style={{width:"100%"}} />
+        </div>
         {this.state.register ? <div>
-          <header className="App-header">
-            <Link onClick={this.setRegister} to="/">Login</Link>
-          </header>
           <Switch>
             <Route path="/" render={ (renderProps) => {
-              return <Register registeredCallback={ this.props.registeredCallback } history={ renderProps.history } />;
-            } } />
+              return <Register setRegister={this.setRegister} registeredCallback={ this.props.registeredCallback } history={ renderProps.history } />;
+            }} />
           </Switch>
-        </div> : <div>
+        </div> :
+        <div className="ui middle aligned center aligned grid" >
+          <div className="column">
+            <form className="ui large form" >
+              <div className="ui stacked segment">
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="user icon"></i>
+                    <input onChange={ this.onChange } value={ this.state.username }  type="text" name="username" placeholder="Username" id="username" />
+                  </div>
+                </div>
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="lock icon"></i>
+                    <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" placeholder="Password" />
+                  </div>
+                </div>
+                <div onClick={ this.handleSubmit } className="ui fluid large teal submit button">Login</div>
+              </div>
+
+              <div className="ui error message">
+                <ul>{
+                  this.state.errors.map((error) => <li>{error}</li>)
+                }</ul>
+              </div>
+
+            </form>
+            <div className="ui message">
+              New to us? <a onClick={this.setRegister}>Register</a>
+            </div>
+          </div>
+
+        </div>
+      }
+    </div>
+  )
+}
+}
+
+{/* <div>
           <header className="App-header">
             <Link onClick={this.setRegister} to="/">Register</Link>
           </header>
+
+
           <h1>Login</h1>
           <ul>{
             this.state.errors.map((error) => <li>{error}</li>)
@@ -75,8 +117,4 @@ export default class Login extends Component {
             <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" /><br />
             <input type="submit" />
           </form>
-        </div>}
-      </div>
-    );
-  }
-}
+        </div>} */}

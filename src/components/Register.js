@@ -45,16 +45,38 @@ export default class Register extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Register</h1>
-        <form onSubmit={ this.handleSubmit }>
-          <label htmlFor="username">Username: </label>
-          <input onChange={ this.onChange } value={ this.state.username } type="text" name="username" id="username" /><br />
-          <label htmlFor="password">Password: </label>
-          <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" /><br />
-          <input type="submit" />
+        <div className="ui middle aligned center aligned grid" >
+      <div className="column">
+        <form className="ui large form" >
+          <div className="ui stacked segment">
+            <div className="field">
+              <div className="ui left icon input">
+                <i className="user icon"></i>
+                <input onChange={ this.onChange } value={ this.state.username }  type="text" name="username" placeholder="Username" id="username" />
+              </div>
+            </div>
+            <div className="field">
+              <div className="ui left icon input">
+                <i className="lock icon"></i>
+                <input onChange={ this.onChange } value={ this.state.password } type="password" name="password" id="password" placeholder="Password" />
+              </div>
+            </div>
+            <div onClick={ this.handleSubmit } className="ui fluid large teal submit button">Register</div>
+          </div>
+
+          <div className="ui error message">
+            <ul>{
+              this.state.errors.map((error) => <li>{error}</li>)
+            }</ul>
+          </div>
+
         </form>
+        <div className="ui message">
+            Been here before? <a onClick={this.props.setRegister}>Login</a>
+          </div>
       </div>
+    </div>
+
     );
   }
 }

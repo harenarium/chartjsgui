@@ -109,7 +109,7 @@ class TextEditor extends Component {
 
         <div className="TextEditor" style={{ ...style}}>
           <textarea onChange={() => {this.setState({copied: false})}} style={{display: 'none'}} id='input' value={this.state.code} />
-          <button onClick={this.copyFunction}>Copy Code</button>
+          <button style={{width: "15%"}} className="ui fluid medium white-smoke submit button" onClick={this.copyFunction}>Copy Code</button>
           {this.state.copied ? ' Code Copied' : null}
           <br /><br />
           <CodeMirror ref='code' key={key} value={this.state.code} options={options} />

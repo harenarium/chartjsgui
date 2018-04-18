@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 const style = {
+	padding: '5%',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',

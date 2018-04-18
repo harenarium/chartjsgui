@@ -20,8 +20,10 @@ class Navbar extends Component {
     return (
       <div className="Navbar" style={{...style}}>
 
-        <div style={{position: "absolute", right: "2%", top: "27%"}}>
-            <Link style={{textDecorationLine: "none"}} to="/logout">Logout</Link>
+
+        <div style={{position: "absolute", right: ".25%", top: "10%"}}>
+            <div onClick={ this.props.logout } className="ui fluid medium white-smoke submit button">Logout</div>
+            {/* <Link style={{textDecorationLine: "none"}} to="/logout">Logout</Link> */}
        </div>
      <Switch>
        <Route path="/logout" render={ (renderProps) => {

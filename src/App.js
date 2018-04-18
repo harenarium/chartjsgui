@@ -25,8 +25,8 @@ class App extends Component {
         radius: 0,
         pointStyle: "circle",
         label: "",
-        labels: Data.labels,
-        data: Data.data,
+        labels: [],
+        data: [],
         options: {},
       },
       backgroundColor: "rgba(0, 0, 0, 0.1)",
@@ -64,7 +64,8 @@ componentDidMount(){
    localStorage.user = ""
    this.setState({
      auth: null
-   }, () => history.push("/"))
+   })
+   // , () => history.push("/"))
  }
 
 
