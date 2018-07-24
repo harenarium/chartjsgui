@@ -1,4 +1,4 @@
-GooeyCharts
+#GooeyCharts
 
 Gooey Charts is a GUI that is built around the charts.js library. It allows developers to quickly and intuitively design a javascript chart through menus, buttons, sliders, and inputs. It then outputs code that can be copied into a javascript file or even straight into html between script tags.
 
@@ -39,16 +39,12 @@ $ npm start
 * FileReader
 * Custom CSS
 
-
-```
-
 ## Release History
 
 * 0.0.1
     * Work in progress
 
-## Meta
-
-[harenarium](https://github.com/harenarium)
+## License
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
+[harenarium](https://github.com/harenarium)
