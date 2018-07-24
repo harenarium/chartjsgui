@@ -30,6 +30,8 @@ Start the app
 $ npm start
 ```
 
+Repeat for [Backend](https://github.com/harenarium/chartjsgui-backend)
+
 ## Built With
 
 * ReactJS (as single page app)
