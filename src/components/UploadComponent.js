@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 const style = {
-	padding: '5%',
 	backgroundColor: '#F5F5F5',
 	float: 'left',
 	position: 'absolute',
@@ -35,27 +34,16 @@ class UploadComponent extends Component{
 
   render() {
 
-		return (
+    return (
         <div style={{ ...style}} >
-          <h3 style={{padding: '0%'}}>
+          <div style={{padding: '10px'}}>
             Upload JSON File
-          </h3>
-					<div style={{margin: 'auto'}}>
-						<input type="file" id="file" onChange={this.changeHandler} />
-					</div><br></br>
+          </div>
+          <div>
+            <input type="file" id="file" onChange={this.changeHandler} />
+          </div><br></br>
         </div>
     )
-
-    // return (
-    //     <div style={{ ...style}} >
-    //       <div style={{padding: '10px'}}>
-    //         Upload JSON File
-    //       </div>
-    //       <div>
-    //         <input type="file" id="file" onChange={this.changeHandler} />
-    //       </div><br></br>
-    //     </div>
-    // )
   }
 }
 

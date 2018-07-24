@@ -9,7 +9,7 @@ const style = {
   // marginBottom: '1.5rem',
   float: 'right',
   position: 'absolute',
-  top: '10%',
+  top: '15%',
   left: '25%',
   width: '50%',
   height: '40%'
@@ -28,13 +28,21 @@ class ChartComponent extends Component {
           backgroundColor: props.chartData.backgroundColor,
           borderColor: props.chartData.borderColor,
           borderWidth: props.chartData.borderWidth,
-          borderDash: props.chartData.borderDash,
-          lineTension: props.chartData.lineTension,
-          radius: props.chartData.radius,
-          pointStyle: props.chartData.pointStyle
         }]
       },
-      options: {maintainAspectRatio: false, events: []}
+      options: {
+        elements: {
+          point: {
+            radius: props.chartData.radius,
+            pointStyle: props.chartData.pointStyle
+          },
+          line: {
+            borderDash: props.chartData.borderDash,
+            lineTension: props.chartData.lineTension
+          }
+        },
+        maintainAspectRatio: false
+      }
     }
     return config
   }

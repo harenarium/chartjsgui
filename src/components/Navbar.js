@@ -21,7 +21,7 @@ class Navbar extends Component {
       <div className="Navbar" style={{...style}}>
 
 
-        <div style={{position: "absolute", right: ".25%", top: "10%"}}>
+        <div style={{position: "absolute", right: ".5%", top: "15%"}}>
             <div onClick={ this.props.logout } className="ui fluid medium white-smoke submit button">Logout</div>
             {/* <Link style={{textDecorationLine: "none"}} to="/logout">Logout</Link> */}
        </div>
