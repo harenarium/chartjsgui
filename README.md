@@ -8,7 +8,7 @@ Gooey Charts is a GUI that is built around the charts.js library. It allows deve
 coming soon!
 
 
-## Development setup:
+## Development setup
 
 (requires npm)
 
